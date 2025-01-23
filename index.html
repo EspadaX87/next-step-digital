@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Step Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
         }
         header {
-            background-color: #003366;
+            background: url('https://via.placeholder.com/1600x400') no-repeat center center/cover;
             color: #fff;
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
+        }
+        header img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
         }
         nav {
             display: flex;
@@ -29,6 +43,7 @@
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
         }
         nav a:hover {
             text-decoration: underline;
@@ -41,15 +56,25 @@
         }
         .section h2 {
             color: #00509E;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .services li i {
+            color: #00509E;
+            margin-right: 10px;
         }
         footer {
             text-align: center;
             background: #003366;
             color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 20px;
         }
         .button {
             background-color: #00509E;
@@ -60,6 +85,8 @@
             display: inline-block;
             margin-top: 20px;
             border-radius: 5px;
+            font-family: 'Montserrat', sans-serif;
+            transition: background-color 0.3s;
         }
         .button:hover {
             background-color: #003366;
@@ -68,6 +95,7 @@
 </head>
 <body>
     <header>
+        <img src="https://your-logo-url.com/logo.png" alt="Next Step Digital Logo">
         <h1>Next Step Digital</h1>
         <p>Your Partner in Digital Success</p>
     </header>
@@ -91,20 +119,20 @@
             <p>At Next Step Digital, our mission is to empower small businesses by offering high-quality website creation, software support, and tech consulting services. We’re here to help you succeed in the digital world with reliable and personalized solutions.</p>
         </section>
 
-        <section id="services" class="section">
+        <section id="services" class="section services">
             <h2>Our Services</h2>
             <ul>
-                <li>Website Design & Development</li>
-                <li>Software Assistance</li>
-                <li>Tech Consulting</li>
-                <li>Small Business Digital Support</li>
+                <li><i class="fas fa-globe"></i>Website Design & Development</li>
+                <li><i class="fas fa-tools"></i>Software Assistance</li>
+                <li><i class="fas fa-comments"></i>Tech Consulting</li>
+                <li><i class="fas fa-briefcase"></i>Small Business Digital Support</li>
             </ul>
         </section>
 
         <section id="contact" class="section">
             <h2>Contact Us</h2>
             <p>Ready to take the next step? Reach out to us today!</p>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p>Email: <a href="mailto:espadax880@gmail.com">espadax880@gmail.com</a></p>
         </section>
     </div>
 
