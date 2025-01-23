@@ -291,11 +291,11 @@
             <h2>Contact Us Today</h2>
             <p>Have questions or need assistance? Let us know how we can help!</p>
             <div class="cta-form">
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="tel" placeholder="Your Phone Number" optional>
-                    <textarea placeholder="Your Message or Questions" rows="5" required></textarea>
+                <form action="https://formspree.io/f/mdkaoyka" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                    <input type="tel" name="phone" placeholder="Your Phone Number" optional>
+                    <textarea name="message" placeholder="Your Message or Questions" rows="5" required></textarea>
                     <button type="submit">Submit</button>
                 </form>
             </div>
