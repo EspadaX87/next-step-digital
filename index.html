@@ -159,15 +159,6 @@
             margin-bottom: 15px;
             color: #00509E;
         }
-        .service-image {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .service-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
         footer {
             text-align: center;
             background: #003366;
@@ -207,6 +198,44 @@
             font-weight: bold;
             color: #00509E;
         }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-card {
+                flex: 0 1 90%;
+                margin-bottom: 20px;
+            }
+
+            header p {
+                font-size: 1.2em;
+            }
+
+            .cta {
+                padding: 20px;
+            }
+
+            .cta-form {
+                width: 100%;
+            }
+
+            footer {
+                padding: 20px 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -224,15 +253,15 @@
     </nav>
 
     <div class="container">
-        <section id="home" class="section">
-            <h2>Welcome to Next Step Digital</h2>
-            <p>We specialize in building and improving websites, providing expert computer and software assistance, and helping businesses thrive in the digital age. Let us take your digital presence to the next step.</p>
-            <a href="#contact" class="button">Get Started</a>
-        </section>
-
         <section id="about" class="section">
             <h2>About Us</h2>
-            <p>At Next Step Digital, our mission is to empower small businesses by offering high-quality website creation, software support, and tech consulting services. Our team is dedicated to helping your business achieve its digital goals through reliable and personalized solutions.</p>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <img src="https://via.placeholder.com/300" alt="Team Collaboration" style="border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 300px;">
+                <p style="max-width: 600px; text-align: left;">
+                    At <strong>Next Step Digital</strong>, we are dedicated to empowering small businesses by providing exceptional services in website creation, software support, and tech consulting. With a passion for innovation and a commitment to excellence, our team ensures personalized and effective solutions tailored to your unique needs. 
+                    Let us be your trusted partner in navigating the digital world and taking your business to the next level.
+                </p>
+            </div>
         </section>
 
         <section id="services" class="section">
@@ -258,9 +287,6 @@
                     <h3>Small Business Digital Support</h3>
                     <p>Helping small businesses thrive online.</p>
                 </div>
-            </div>
-            <div class="service-image">
-                <img src="/mnt/data/photo-1520520688967-7bdc16e77dc2.jpg" alt="Tech setup example">
             </div>
         </section>
 
