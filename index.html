@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBFVX0X388"></script>
     <script>
@@ -267,8 +269,7 @@
         <section id="about" class="section">
             <h2>About Us</h2>
             <p style="max-width: 600px; margin: 0 auto;">
-                At <strong>Next Step Digital</strong>, we are dedicated to empowering small businesses by providing exceptional services in website creation, software support, and tech consulting. With a passion for innovation and a commitment to excellence, our team ensures personalized and effective solutions tailored to your unique needs. 
-                Let us be your trusted partner in navigating the digital world and taking your business to the next level.
+                At <strong>Next Step Digital</strong>, we build custom websites, fix tech issues, and provide expert advice tailored to your business goals. Think of us as your go-to tech problem-solvers with a creative twist.
             </p>
         </section>
 
@@ -283,29 +284,28 @@
                 <div class="service-card">
                     <i class="fas fa-tools"></i>
                     <h3>Software Assistance</h3>
-                    <p>Get expert help with your software challenges.</p>
+                    <p>We troubleshoot and solve your software headaches.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-comments"></i>
                     <h3>Tech Consulting</h3>
-                    <p>Expert advice to navigate the digital world.</p>
+                    <p>Practical advice to boost your digital presence.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Small Business Digital Support</h3>
-                    <p>Helping small businesses thrive online.</p>
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Custom Automation</h3>
+                    <p>Save time with tailored tech solutions for daily tasks.</p>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="cta">
-            <h2>Contact Us Today</h2>
-            <p>Have questions or need assistance? Let us know how we can help!</p>
+            <h2>Let's Connect!</h2>
+            <p>Have questions? We're here to make your tech life easy. Drop us a line below!</p>
             <div class="cta-form">
                 <form action="https://formspree.io/f/mdkaoyka" method="POST">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="_replyto" placeholder="Your Email" required>
-                    <input type="tel" name="phone" placeholder="Your Phone Number" optional>
                     <textarea name="message" placeholder="Your Message or Questions" rows="5" required></textarea>
                     <button type="submit">Submit</button>
                 </form>
@@ -313,15 +313,12 @@
         </section>
 
         <section class="testimonials">
-            <h2>What Our Clients Say</h2>
+            <h2>Client Feedback</h2>
             <div class="testimonial">
-                <p>"Next Step Digital transformed our outdated website into a sleek and professional platform. Highly recommend!" <br><span>- Sarah T.</span></p>
+                <p>"Next Step Digital revamped my site and doubled my traffic. Highly recommended!" <br><span>- Alex B.</span></p>
             </div>
             <div class="testimonial">
-                <p>"Their tech consulting helped my small business improve productivity. Amazing team!" <br><span>- John D.</span></p>
-            </div>
-            <div class="testimonial">
-                <p>"Professional, efficient, and friendly service. Will definitely use them again!" <br><span>- Emily R.</span></p>
+                <p>"They automated my processes and saved me hours every week. Absolute lifesavers!" <br><span>- Jamie L.</span></p>
             </div>
         </section>
     </div>
@@ -368,6 +365,23 @@
                 }
             },
             "retina_detect": true
+        });
+
+        gsap.registerPlugin(TextPlugin);
+        gsap.to("header p", {
+            text: "We build amazing websites and solve tech problems!",
+            duration: 4,
+            delay: 1,
+            ease: "power1.inOut"
+        });
+
+        document.querySelectorAll(".service-card").forEach(card => {
+            card.addEventListener("mouseover", () => {
+                gsap.to(card, { scale: 1.1, duration: 0.3 });
+            });
+            card.addEventListener("mouseout", () => {
+                gsap.to(card, { scale: 1, duration: 0.3 });
+            });
         });
     </script>
 </body>
