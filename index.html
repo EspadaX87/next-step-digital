@@ -15,9 +15,9 @@
             color: #333;
         }
         header {
-            background: url('https://via.placeholder.com/1600x400') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
             color: #fff;
-            padding: 60px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
         header img {
@@ -26,55 +26,83 @@
         }
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 10px;
         }
         header p {
-            font-size: 1.2em;
+            font-size: 1.5em;
         }
         nav {
             display: flex;
             justify-content: center;
             background: #00509E;
-            padding: 10px 0;
+            padding: 15px 0;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-weight: bold;
             font-family: 'Montserrat', sans-serif;
+            font-size: 1.1em;
         }
         nav a:hover {
             text-decoration: underline;
         }
         .container {
-            padding: 20px;
+            padding: 20px 40px;
         }
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
         .section h2 {
             color: #00509E;
             font-family: 'Montserrat', sans-serif;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
-        .services ul {
-            list-style: none;
-            padding: 0;
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
-        .services li {
-            margin: 10px 0;
-            font-size: 1.1em;
+        .service-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            flex: 0 1 calc(25% - 20px);
+            text-align: center;
         }
-        .services li i {
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-card i {
+            font-size: 2em;
             color: #00509E;
-            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .service-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
         }
         footer {
             text-align: center;
             background: #003366;
             color: white;
-            padding: 20px;
+            padding: 30px 20px;
+        }
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+        footer .social-icons a:hover {
+            color: #00509E;
         }
         .button {
             background-color: #00509E;
@@ -119,14 +147,30 @@
             <p>At Next Step Digital, our mission is to empower small businesses by offering high-quality website creation, software support, and tech consulting services. We’re here to help you succeed in the digital world with reliable and personalized solutions.</p>
         </section>
 
-        <section id="services" class="section services">
+        <section id="services" class="section">
             <h2>Our Services</h2>
-            <ul>
-                <li><i class="fas fa-globe"></i>Website Design & Development</li>
-                <li><i class="fas fa-tools"></i>Software Assistance</li>
-                <li><i class="fas fa-comments"></i>Tech Consulting</li>
-                <li><i class="fas fa-briefcase"></i>Small Business Digital Support</li>
-            </ul>
+            <div class="services">
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Website Design & Development</h3>
+                    <p>Custom websites tailored to your business needs.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Software Assistance</h3>
+                    <p>Get expert help with your software challenges.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Tech Consulting</h3>
+                    <p>Expert advice to navigate the digital world.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Small Business Digital Support</h3>
+                    <p>Helping small businesses thrive online.</p>
+                </div>
+            </div>
         </section>
 
         <section id="contact" class="section">
@@ -137,6 +181,11 @@
     </div>
 
     <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
         <p>&copy; 2025 Next Step Digital. All Rights Reserved.</p>
     </footer>
 </body>
