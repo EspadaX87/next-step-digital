@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Step Digital</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
@@ -45,18 +43,12 @@
             background: #00509E;
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 20px;
         }
 
         header .logo {
-            max-width: 150px;
+            max-width: 100px;
             margin: 0 auto;
-        }
-
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            margin: 20px 0 10px;
-            font-size: 2em;
         }
 
         header p {
@@ -101,6 +93,25 @@
             margin: 0 auto;
         }
 
+        .animated-brain {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            background: url('animated-brain.png') no-repeat center;
+            background-size: contain;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
         .services ul {
             list-style: none;
             padding: 0;
@@ -112,28 +123,27 @@
         }
 
         .blog-section {
-            background-color: #f1f1f1;
             padding: 50px 20px;
-        }
-
-        .blog-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #333;
-            margin-bottom: 20px;
+            text-align: center;
+            background-color: #f1f1f1;
         }
 
         .blog-post {
-            background: white;
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
+            background: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
         }
 
         .blog-post h3 {
             color: #00509E;
             margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            line-height: 1.6;
         }
 
         .contact-form {
@@ -179,8 +189,8 @@
 <body>
     <header>
         <img src="your-logo.png" alt="Next Step Digital Logo" class="logo">
-        <h1>Next Step Digital</h1>
         <p>Your go-to for Digital Success</p>
+        <div class="animated-brain"></div>
     </header>
 
     <nav>
@@ -193,6 +203,7 @@
     <section id="about" class="section">
         <h2>About Us</h2>
         <p>We create stunning websites and solve your tech problems with style and creativity. Let us help you take the next step in digital success!</p>
+        <div class="animated-brain"></div>
     </section>
 
     <section id="services" class="section services">
@@ -202,18 +213,20 @@
             <li>Tech Consulting</li>
             <li>Custom Automation</li>
         </ul>
+        <div class="animated-brain"></div>
     </section>
 
     <section id="blog" class="section blog-section">
         <h2>Blog</h2>
         <div class="blog-post">
             <h3>5 Tips to Boost Your Online Presence</h3>
-            <p>Discover how to elevate your business with these simple tips for improving your digital footprint!</p>
+            <p>Discover how to elevate your business with these simple tips for improving your digital footprint! From leveraging social media to optimizing your website, we cover the essentials to get you noticed.</p>
         </div>
         <div class="blog-post">
             <h3>Why Custom Automation is a Game-Changer</h3>
-            <p>Learn how automation can streamline your workflow and save you time.</p>
+            <p>Learn how automation can streamline your workflow, save time, and reduce errors. Explore the benefits of custom solutions tailored to your unique business needs.</p>
         </div>
+        <div class="animated-brain"></div>
     </section>
 
     <section id="contact" class="section">
@@ -226,10 +239,12 @@
                 <button type="submit">Reach Out!</button>
             </form>
         </div>
+        <div class="animated-brain"></div>
     </section>
 
     <footer>
         <p>&copy; 2025 Next Step Digital. All rights reserved.</p>
+        <div class="animated-brain"></div>
     </footer>
 </body>
 </html>
