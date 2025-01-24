@@ -169,6 +169,42 @@
         footer .social-icons a:hover {
             color: #FFD700;
         }
+        .testimonials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .testimonial {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .testimonial:hover {
+            transform: translateY(-5px);
+        }
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .testimonial p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        .testimonial strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1em;
+            color: #00509E;
+        }
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -202,7 +238,18 @@
             font-size: 1em;
             color: #555;
         }
-
+        .blog-link {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            color: #00509E;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .blog-link:hover {
+            color: #FFD700;
+        }
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -250,9 +297,21 @@
         <section id="testimonials" class="section">
             <h2>What Our Clients Say</h2>
             <div class="testimonials">
-                <p><strong>Jane Doe:</strong> "Next Step Digital transformed our website into a modern masterpiece. Highly recommend!"</p>
-                <p><strong>John Smith:</strong> "Their tech consulting services are top-notch. My business has never run smoother!"</p>
-                <p><strong>Emily White:</strong> "Custom automation saved us hours every week. Thank you, Next Step Digital!"</p>
+                <div class="testimonial">
+                    <img src="https://via.placeholder.com/80" alt="Jane Doe">
+                    <strong>Jane Doe</strong>
+                    <p>"Next Step Digital transformed our website into a modern masterpiece. Highly recommend!"</p>
+                </div>
+                <div class="testimonial">
+                    <img src="https://via.placeholder.com/80" alt="John Smith">
+                    <strong>John Smith</strong>
+                    <p>"Their tech consulting services are top-notch. My business has never run smoother!"</p>
+                </div>
+                <div class="testimonial">
+                    <img src="https://via.placeholder.com/80" alt="Emily White">
+                    <strong>Emily White</strong>
+                    <p>"Custom automation saved us hours every week. Thank you, Next Step Digital!"</p>
+                </div>
             </div>
         </section>
 
@@ -261,24 +320,27 @@
             <p>Explore helpful tech and computer advice to level up your skills and knowledge.</p>
             <div class="blog-grid">
                 <div class="blog-post">
-                    <img src="https://via.placeholder.com/300x200" alt="Post Image">
+                    <img src="https://via.placeholder.com/300x200" alt="5 Tips for a Faster Computer">
                     <div class="blog-post-content">
                         <h3 class="blog-post-title">5 Tips for a Faster Computer</h3>
                         <p class="blog-post-excerpt">Learn simple ways to speed up your computer and improve its performance.</p>
+                        <a href="blog1.html" class="blog-link">Read More</a>
                     </div>
                 </div>
                 <div class="blog-post">
-                    <img src="https://via.placeholder.com/300x200" alt="Post Image">
+                    <img src="https://via.placeholder.com/300x200" alt="Understanding Cloud Storage">
                     <div class="blog-post-content">
                         <h3 class="blog-post-title">Understanding Cloud Storage</h3>
                         <p class="blog-post-excerpt">Discover the benefits of cloud storage and how it can simplify your digital life.</p>
+                        <a href="blog2.html" class="blog-link">Read More</a>
                     </div>
                 </div>
                 <div class="blog-post">
-                    <img src="https://via.placeholder.com/300x200" alt="Post Image">
+                    <img src="https://via.placeholder.com/300x200" alt="Top 3 Free Antivirus Software">
                     <div class="blog-post-content">
                         <h3 class="blog-post-title">Top 3 Free Antivirus Software</h3>
                         <p class="blog-post-excerpt">Protect your computer with these top-rated free antivirus programs.</p>
+                        <a href="blog3.html" class="blog-link">Read More</a>
                     </div>
                 </div>
             </div>
