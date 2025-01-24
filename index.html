@@ -9,15 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBFVX0X388"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-HBFVX0X388');
-    </script>
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
@@ -95,11 +86,6 @@
             margin-bottom: 20px;
             text-align: center;
         }
-        .section p {
-            text-align: center;
-            font-size: 1.2em;
-            color: #333;
-        }
         .cta {
             background: #00509E;
             color: white;
@@ -108,27 +94,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .cta h2 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 20px;
-        }
-        .cta p {
-            margin-bottom: 20px;
-        }
-        .cta-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .cta-form input, .cta-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
         .cta-form button {
-            width: 100%;
-            padding: 10px;
             background: #FFD700;
             color: #00509E;
             border: none;
@@ -142,41 +108,11 @@
             background: #004080;
             color: white;
         }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .service-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            flex: 0 1 calc(25% - 20px);
-            text-align: center;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        }
-        .service-card i {
-            font-size: 3em;
-            color: #00509E;
-            margin-bottom: 15px;
-        }
-        .service-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #00509E;
-        }
         footer {
             text-align: center;
             background: #003366;
             color: white;
-            padding: 40px 20px;
+            padding: 20px;
         }
         footer .social-icons a {
             color: white;
@@ -188,65 +124,15 @@
         footer .social-icons a:hover {
             color: #FFD700;
         }
-        .testimonials {
-            padding: 40px 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .testimonials h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .testimonial {
-            margin: 20px 0;
-            text-align: center;
-        }
-        .testimonial p {
-            font-size: 1.1em;
-            color: #555;
-        }
-        .testimonial span {
-            font-weight: bold;
-            color: #00509E;
-        }
-
-        /* Mobile Optimizations */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
-                padding: 10px 0;
             }
-
-            nav a {
-                margin: 5px 0;
-            }
-
-            .services {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .service-card {
-                flex: 0 1 90%;
-                margin-bottom: 20px;
-            }
-
-            header p {
-                font-size: 1.2em;
-            }
-
-            .cta {
-                padding: 20px;
-            }
-
             .cta-form {
                 width: 100%;
             }
-
             footer {
-                padding: 20px 10px;
+                padding: 10px;
             }
         }
     </style>
@@ -268,130 +154,56 @@
     <div class="container">
         <section id="about" class="section">
             <h2>About Us</h2>
-            <p style="max-width: 600px; margin: 0 auto;">
-                At <strong>Next Step Digital</strong>, we build custom websites, fix tech issues, and provide expert advice tailored to your business goals. Think of us as your go-to tech problem-solvers with a creative twist.
-            </p>
+            <p>We create stunning websites and solve your tech problems with style and creativity. Let us help you take the next step in digital success!</p>
         </section>
 
         <section id="services" class="section">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service-card">
-                    <i class="fas fa-globe"></i>
-                    <h3>Website Design & Development</h3>
-                    <p>Custom websites tailored to your business needs.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Software Assistance</h3>
-                    <p>We troubleshoot and solve your software headaches.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-comments"></i>
-                    <h3>Tech Consulting</h3>
-                    <p>Practical advice to boost your digital presence.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Custom Automation</h3>
-                    <p>Save time with tailored tech solutions for daily tasks.</p>
-                </div>
-            </div>
+            <h2>Services</h2>
+            <ul>
+                <li>Website Design</li>
+                <li>Tech Consulting</li>
+                <li>Custom Automation</li>
+            </ul>
         </section>
 
         <section id="contact" class="cta">
-            <h2>Let's Connect!</h2>
-            <p>Have questions? We're here to make your tech life easy. Drop us a line below!</p>
+            <h2>Get in Touch</h2>
             <div class="cta-form">
-                <form action="https://formspree.io/f/mdkaoyka" method="POST">
+                <form action="#">
                     <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="_replyto" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message or Questions" rows="5" required></textarea>
-                    <button type="submit">Submit</button>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <button type="submit">Reach Out!</button>
                 </form>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <h2>Client Feedback</h2>
-            <div class="testimonial">
-                <p>"Next Step Digital revamped my site and doubled my traffic. Highly recommended!" <br><span>- Alex B.</span></p>
-            </div>
-            <div class="testimonial">
-                <p>"They automated my processes and saved me hours every week. Absolute lifesavers!" <br><span>- Jamie L.</span></p>
             </div>
         </section>
     </div>
 
     <footer>
+        <p>&copy; 2025 Next Step Digital. All rights reserved.</p>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
-        <p>&copy; 2025 Next Step Digital. All Rights Reserved.</p>
     </footer>
 
     <script>
-        const isMobile = window.innerWidth <= 768;
-        const particleCount = isMobile ? 30 : 80;
-
         particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": particleCount,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#00509E"
-                },
-                "shape": {
-                    "type": "image",
-                    "image": {
-                        "src": "https://cdn-icons-png.flaticon.com/512/4241/4241042.png",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "line_linked": {
-                    "enable": false
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 3
-                }
-            },
-            "retina_detect": true
+            particles: {
+                number: { value: 50 },
+                color: { value: "#00509E" },
+                shape: { type: "circle" },
+                move: { enable: true, speed: 3 }
+            }
         });
 
         gsap.registerPlugin(TextPlugin);
-        const loopText = () => {
-            gsap.to("header p", {
-                text: "We build amazing websites and solve tech problems!",
-                duration: 4,
-                ease: "power1.inOut",
-                onComplete: () => {
-                    gsap.to("header p", {
-                        text: "Your Partner in Digital Success",
-                        duration: 4,
-                        ease: "power1.inOut",
-                        onComplete: loopText
-                    });
-                }
-            });
-        };
-        loopText();
-
-        document.querySelectorAll(".service-card").forEach(card => {
-            card.addEventListener("mouseover", () => {
-                gsap.to(card, { scale: 1.1, duration: 0.3 });
-            });
-            card.addEventListener("mouseout", () => {
-                gsap.to(card, { scale: 1, duration: 0.3 });
-            });
+        gsap.to("header p", {
+            text: "Your go-to for web solutions!",
+            duration: 4,
+            repeat: -1,
+            yoyo: true
         });
     </script>
 </body>
