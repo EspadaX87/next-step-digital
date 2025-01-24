@@ -205,51 +205,6 @@
             font-size: 1em;
             color: #00509E;
         }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-        .blog-post {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .blog-post:hover {
-            transform: translateY(-5px);
-        }
-        .blog-post img {
-            width: 100%;
-            height: auto;
-        }
-        .blog-post-content {
-            padding: 20px;
-        }
-        .blog-post-title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #00509E;
-        }
-        .blog-post-excerpt {
-            font-size: 1em;
-            color: #555;
-        }
-        .blog-link {
-            display: block;
-            margin-top: 10px;
-            text-align: center;
-            color: #00509E;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .blog-link:hover {
-            color: #FFD700;
-        }
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -275,7 +230,6 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#blog">Blog</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -311,37 +265,6 @@
                     <img src="https://via.placeholder.com/80" alt="Emily White">
                     <strong>Emily White</strong>
                     <p>"Custom automation saved us hours every week. Thank you, Next Step Digital!"</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="blog" class="section">
-            <h2>Blog</h2>
-            <p>Explore helpful tech and computer advice to level up your skills and knowledge.</p>
-            <div class="blog-grid">
-                <div class="blog-post">
-                    <img src="https://via.placeholder.com/300x200" alt="5 Tips for a Faster Computer">
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">5 Tips for a Faster Computer</h3>
-                        <p class="blog-post-excerpt">Learn simple ways to speed up your computer and improve its performance.</p>
-                        <a href="blog1.html" class="blog-link">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-post">
-                    <img src="https://via.placeholder.com/300x200" alt="Understanding Cloud Storage">
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Understanding Cloud Storage</h3>
-                        <p class="blog-post-excerpt">Discover the benefits of cloud storage and how it can simplify your digital life.</p>
-                        <a href="blog2.html" class="blog-link">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-post">
-                    <img src="https://via.placeholder.com/300x200" alt="Top 3 Free Antivirus Software">
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Top 3 Free Antivirus Software</h3>
-                        <p class="blog-post-excerpt">Protect your computer with these top-rated free antivirus programs.</p>
-                        <a href="blog3.html" class="blog-link">Read More</a>
-                    </div>
                 </div>
             </div>
         </section>
