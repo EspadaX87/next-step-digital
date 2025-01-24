@@ -16,6 +16,7 @@
             padding: 0;
             background-color: #f4f4f9;
             color: #333;
+            cursor: none;
         }
         header {
             position: relative;
@@ -124,6 +125,20 @@
         footer .social-icons a:hover {
             color: #FFD700;
         }
+
+        /* Glowing Cursor */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 10000;
+            box-shadow: 0 0 8px #FFD700;
+        }
+
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -138,6 +153,8 @@
     </style>
 </head>
 <body>
+    <div class="cursor" id="cursor"></div>
+
     <header>
         <div id="particles-js"></div>
         <img src="https://i.imgur.com/lzN2C82.png" alt="Next Step Digital Logo">
@@ -204,6 +221,13 @@
             duration: 4,
             repeat: -1,
             yoyo: true
+        });
+
+        // Glowing Cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
         });
     </script>
 </body>
