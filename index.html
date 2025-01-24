@@ -5,246 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Step Digital</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBFVX0X388"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HBFVX0X388');
+    </script>
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
+            background: #f4f4f4;
             color: #333;
-            overflow-x: hidden;
-            cursor: url('custom-mouse.cur'), auto;
         }
-
-        /* Custom glowing mouse effect */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            background: radial-gradient(circle, rgba(0, 255, 234, 0.4) 10%, rgba(0, 255, 234, 0) 60%) fixed;
-            animation: glow 3s infinite alternate;
-        }
-
-        @keyframes glow {
-            0% {
-                filter: hue-rotate(0deg);
-            }
-            100% {
-                filter: hue-rotate(360deg);
-            }
-        }
-
         header {
-            position: relative;
+            background: #00509E;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            color: black;
+            text-shadow: 3px 3px white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .section p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .cta {
             background: #00509E;
             color: white;
             text-align: center;
-            padding: 20px 20px;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        header .logo {
-            max-width: 100px;
-            margin: 0 auto;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin: 0;
-        }
-
-        nav {
-            background: #00376B;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
+        .cta h2 {
             font-family: 'Montserrat', sans-serif;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #00509E;
             margin-bottom: 20px;
         }
-
-        .section p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
+        .cta p {
+            margin-bottom: 20px;
         }
-
-        .animated-brain {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            margin: 20px auto;
-            background: url('animated-brain.png') no-repeat center;
-            background-size: contain;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .services ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .services li {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-
-        .blog-section {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #f1f1f1;
-        }
-
-        .blog-post {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .blog-post h3 {
-            color: #00509E;
-            margin-bottom: 10px;
-        }
-
-        .blog-post p {
-            line-height: 1.6;
-        }
-
-        .contact-form {
-            background: #00376B;
-            color: white;
-            padding: 30px 20px;
-            border-radius: 8px;
+        .cta-form {
             max-width: 600px;
             margin: 0 auto;
         }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
+        .cta-form input {
+            width: 80%;
             padding: 10px;
-            margin: 10px 0;
-            border: none;
+            margin-bottom: 10px;
             border-radius: 5px;
+            border: none;
         }
-
-        .contact-form button {
-            background: #FFD700;
-            color: #00376B;
-            font-size: 1em;
+        .cta-form button {
             padding: 10px 20px;
+            background: #ff9900;
+            color: white;
             border: none;
             border-radius: 5px;
+            font-size: 1em;
             cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background: #FFC107;
-        }
-
-        footer {
-            background: #00376B;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="your-logo.png" alt="Next Step Digital Logo" class="logo">
-        <p>Your go-to for Digital Success</p>
-        <div class="animated-brain"></div>
+        <h1>Welcome to Next Step Digital</h1>
     </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>We create stunning websites and solve your tech problems with style and creativity. Let us help you take the next step in digital success!</p>
-        <div class="animated-brain"></div>
+    <section class="section">
+        <h2>Our Mission</h2>
+        <p>Helping businesses build amazing websites and achieve their digital goals.</p>
     </section>
-
-    <section id="services" class="section services">
-        <h2>Services</h2>
-        <ul>
-            <li>Website Design</li>
-            <li>Tech Consulting</li>
-            <li>Custom Automation</li>
-        </ul>
-        <div class="animated-brain"></div>
-    </section>
-
-    <section id="blog" class="section blog-section">
-        <h2>Blog</h2>
-        <div class="blog-post">
-            <h3>5 Tips to Boost Your Online Presence</h3>
-            <p>Discover how to elevate your business with these simple tips for improving your digital footprint! From leveraging social media to optimizing your website, we cover the essentials to get you noticed.</p>
+    <section class="cta">
+        <h2>Get Started Today!</h2>
+        <p>Let us help you take the next step in your digital journey.</p>
+        <div class="cta-form">
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
         </div>
-        <div class="blog-post">
-            <h3>Why Custom Automation is a Game-Changer</h3>
-            <p>Learn how automation can streamline your workflow, save time, and reduce errors. Explore the benefits of custom solutions tailored to your unique business needs.</p>
-        </div>
-        <div class="animated-brain"></div>
     </section>
-
-    <section id="contact" class="section">
-        <h2>Get in Touch</h2>
-        <div class="contact-form">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Reach Out!</button>
-            </form>
-        </div>
-        <div class="animated-brain"></div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Next Step Digital. All rights reserved.</p>
-        <div class="animated-brain"></div>
-    </footer>
 </body>
 </html>
