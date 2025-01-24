@@ -7,36 +7,77 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBFVX0X388"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-HBFVX0X388');
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
-            background: #f4f4f4;
+            padding: 0;
+            background-color: #f4f4f9;
             color: #333;
+            cursor: none;
         }
         header {
-            background: #00509E;
-            color: white;
-            padding: 20px;
+            position: relative;
+            height: 50vh;
+            color: #fff;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
-        header h1 {
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+        header img {
+            max-width: 450px;
+            margin-bottom: 20px;
+            z-index: 2;
+            position: relative;
+        }
+        header p {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 10px;
+            z-index: 2;
+            position: relative;
+            color: white;
+            text-shadow: 2px 2px #00509E;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #00509E;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.5em;
-            margin: 0;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #FFD700;
+        }
+        .container {
+            padding: 20px 40px;
         }
         .section {
-            padding: 40px 20px;
-            text-align: center;
+            margin-bottom: 60px;
         }
         .section h2 {
             color: black;
@@ -44,11 +85,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.5em;
             margin-bottom: 20px;
-        }
-        .section p {
             text-align: center;
-            font-size: 1.2em;
-            color: #333;
         }
         .cta {
             background: #00509E;
@@ -58,50 +95,140 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .cta h2 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 20px;
-        }
-        .cta p {
-            margin-bottom: 20px;
-        }
-        .cta-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .cta-form input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: none;
-        }
         .cta-form button {
-            padding: 10px 20px;
-            background: #ff9900;
-            color: white;
+            background: #FFD700;
+            color: #00509E;
             border: none;
             border-radius: 5px;
-            font-size: 1em;
             cursor: pointer;
+            font-size: 1.2em;
+            font-family: 'Montserrat', sans-serif;
+            transition: background 0.3s;
+        }
+        .cta-form button:hover {
+            background: #004080;
+            color: white;
+        }
+        footer {
+            text-align: center;
+            background: #003366;
+            color: white;
+            padding: 20px;
+        }
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.8em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #FFD700;
+        }
+
+        /* Glowing Cursor */
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 10000;
+            box-shadow: 0 0 8px #FFD700;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .cta-form {
+                width: 100%;
+            }
+            footer {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="cursor" id="cursor"></div>
+
     <header>
-        <h1>Welcome to Next Step Digital</h1>
+        <div id="particles-js"></div>
+        <img src="https://i.imgur.com/lzN2C82.png" alt="Next Step Digital Logo">
+        <p>Your Partner in Digital Success</p>
     </header>
-    <section class="section">
-        <h2>Our Mission</h2>
-        <p>Helping businesses build amazing websites and achieve their digital goals.</p>
-    </section>
-    <section class="cta">
-        <h2>Get Started Today!</h2>
-        <p>Let us help you take the next step in your digital journey.</p>
-        <div class="cta-form">
-            <input type="email" placeholder="Enter your email">
-            <button>Subscribe</button>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>We create stunning websites and solve your tech problems with style and creativity. Let us help you take the next step in digital success!</p>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Services</h2>
+            <ul>
+                <li>Website Design</li>
+                <li>Tech Consulting</li>
+                <li>Custom Automation</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="cta">
+            <h2>Get in Touch</h2>
+            <div class="cta-form">
+                <form action="#">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <button type="submit">Reach Out!</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Next Step Digital. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
-    </section>
+    </footer>
+
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 50 },
+                color: { value: "#00509E" },
+                shape: { type: "circle" },
+                move: { enable: true, speed: 3 }
+            }
+        });
+
+        gsap.registerPlugin(TextPlugin);
+        gsap.to("header p", {
+            text: "Your go-to for web solutions!",
+            duration: 4,
+            repeat: -1,
+            yoyo: true
+        });
+
+        // Glowing Cursor
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.pageX + 'px';
+            cursor.style.top = e.pageY + 'px';
+        });
+    </script>
 </body>
 </html>
