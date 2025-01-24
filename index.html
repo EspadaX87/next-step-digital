@@ -14,19 +14,19 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #fffbf0;
             color: #333;
-            cursor: none;
         }
         header {
             position: relative;
-            height: 50vh;
+            height: 60vh;
             color: #fff;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
             overflow: hidden;
         }
         #particles-js {
@@ -38,24 +38,24 @@
             left: 0;
         }
         header img {
-            max-width: 300px;
+            max-width: 350px;
             margin-bottom: 20px;
             z-index: 2;
             position: relative;
         }
         header p {
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: bold;
             margin-top: 10px;
             z-index: 2;
             position: relative;
             color: white;
-            text-shadow: 2px 2px #00509E;
+            text-shadow: 2px 2px #ff6b6b;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #00509E;
+            background: #ff6b6b;
             padding: 15px 0;
             position: sticky;
             top: 0;
@@ -71,7 +71,7 @@
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #FFD700;
+            color: #ffd93d;
         }
         .container {
             padding: 20px 40px;
@@ -81,9 +81,9 @@
             text-align: center;
         }
         .section h2 {
-            color: #00509E;
+            color: #ff6b6b;
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 20px;
         }
         .section p {
@@ -102,19 +102,21 @@
         }
         .services-list li {
             list-style: none;
-            background: #00509E;
-            color: white;
+            background: #ffd93d;
+            color: #ff6b6b;
             padding: 15px 20px;
             border-radius: 10px;
             font-size: 1.2em;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, background 0.3s;
         }
         .services-list li:hover {
             transform: translateY(-5px);
+            background: #ff6b6b;
+            color: white;
         }
         .cta {
-            background: #00509E;
+            background: linear-gradient(45deg, #ffd93d, #ff6b6b);
             color: white;
             text-align: center;
             padding: 40px 20px;
@@ -136,8 +138,8 @@
             display: block;
         }
         .cta-form button {
-            background: #FFD700;
-            color: #00509E;
+            background: #ff6b6b;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -146,12 +148,12 @@
             transition: background 0.3s;
         }
         .cta-form button:hover {
-            background: #004080;
-            color: white;
+            background: #ffd93d;
+            color: #ff6b6b;
         }
         footer {
             text-align: center;
-            background: #003366;
+            background: #ff6b6b;
             color: white;
             padding: 20px;
         }
@@ -163,20 +165,7 @@
             transition: color 0.3s;
         }
         footer .social-icons a:hover {
-            color: #FFD700;
-        }
-
-        /* Glowing Cursor */
-        .cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #FFD700;
-            border-radius: 50%;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 10000;
-            box-shadow: 0 0 8px #FFD700;
+            color: #ffd93d;
         }
 
         @media (max-width: 768px) {
@@ -193,7 +182,6 @@
     </style>
 </head>
 <body>
-    <div class="cursor" id="cursor"></div>
 
     <header>
         <div id="particles-js"></div>
@@ -248,10 +236,10 @@
     <script>
         particlesJS("particles-js", {
             particles: {
-                number: { value: 50 },
-                color: { value: "#00509E" },
+                number: { value: 80 },
+                color: { value: "#ffd93d" },
                 shape: { type: "circle" },
-                move: { enable: true, speed: 3 }
+                move: { enable: true, speed: 2 }
             }
         });
 
@@ -261,13 +249,6 @@
             duration: 4,
             repeat: -1,
             yoyo: true
-        });
-
-        // Glowing Cursor
-        const cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.pageX + 'px';
-            cursor.style.top = e.pageY + 'px';
         });
     </script>
 </body>
