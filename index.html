@@ -368,12 +368,22 @@
         });
 
         gsap.registerPlugin(TextPlugin);
-        gsap.to("header p", {
-            text: "We build amazing websites and solve tech problems!",
-            duration: 4,
-            delay: 1,
-            ease: "power1.inOut"
-        });
+        const loopText = () => {
+            gsap.to("header p", {
+                text: "We build amazing websites and solve tech problems!",
+                duration: 4,
+                ease: "power1.inOut",
+                onComplete: () => {
+                    gsap.to("header p", {
+                        text: "Your Partner in Digital Success",
+                        duration: 4,
+                        ease: "power1.inOut",
+                        onComplete: loopText
+                    });
+                }
+            });
+        };
+        loopText();
 
         document.querySelectorAll(".service-card").forEach(card => {
             card.addEventListener("mouseover", () => {
