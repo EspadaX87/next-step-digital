@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Step Digital</title>
-    <meta name="description" content="Next Step Digital - Your partner in creating stunning websites and solving tech problems.">
+    <title>Next Step Digital - Your Partner in Web Solutions</title>
+    <meta name="description" content="We create stunning websites and solve tech problems with creativity.">
     <meta name="keywords" content="website design, tech consulting, digital solutions, automation">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -263,17 +263,17 @@
             <h2>What Our Clients Say</h2>
             <div class="testimonials">
                 <div class="testimonial">
-                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Ashley Johnson">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Portrait of Ashley Johnson">
                     <strong>Ashley Johnson</strong>
                     <p>"Next Step Digital transformed our website into a modern masterpiece. Highly recommend!"</p>
                 </div>
                 <div class="testimonial">
-                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Michael Carter">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Portrait of Michael Carter">
                     <strong>Michael Carter</strong>
                     <p>"Their tech consulting services are top-notch. My business has never run smoother!"</p>
                 </div>
                 <div class="testimonial">
-                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Jessica Taylor">
+                    <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Portrait of Jessica Taylor">
                     <strong>Jessica Taylor</strong>
                     <p>"Custom automation saved us hours every week. Thank you, Next Step Digital!"</p>
                 </div>
@@ -283,13 +283,14 @@
         <section id="contact" class="cta">
             <h2>Get in Touch</h2>
             <div class="cta-form">
-                <form action="https://formspree.io/f/mdkaoyka" method="POST">
+                <form action="https://formspree.io/f/mdkaoyka" method="POST" onsubmit="showConfirmation(event)">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="tel" name="phone" placeholder="Your Phone Number" required>
                     <textarea name="message" placeholder="Your Message"></textarea>
                     <button type="submit">Reach Out!</button>
                 </form>
+                <p id="confirmation" style="display:none; color: green;">Thank you! Your message has been sent successfully. We'll be in touch soon.</p>
             </div>
         </section>
     </div>
@@ -329,7 +330,11 @@
                 });
             });
         });
+
+        function showConfirmation(event) {
+            event.preventDefault();
+            document.querySelector('#confirmation').style.display = 'block';
+        }
     </script>
 </body>
 </html>
-
